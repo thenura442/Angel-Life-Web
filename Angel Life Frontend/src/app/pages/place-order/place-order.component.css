@@ -1,0 +1,84 @@
+.account-block {
+    padding: 0;
+    background-image: url(https://bootdey.com/img/Content/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+.account-block .overlay {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.account-block .account-testimonial {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.text-theme {
+    color: #019fe0 !important;
+}
+
+.btn-theme {
+    background-color: #019fe0;
+    border-color: #019fe0;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.btn-theme:hover {
+    background-color: #0d6afa;
+}
+
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    border-radius: 20px;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+
+/* INPUT TYPE FILE STYLING */
+
+
+input[type=file]::file-selector-button {
+    background-color: #fff;
+    color: #000;
+    border: 0px;
+    border-right: 1px solid #e5e5e5;
+    padding: 10px 15px;
+    margin-right: 20px;
+    transition: .5s;
+    cursor: pointer;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background-color: #eee;
+    border: 0px;
+    border-right: 1px solid #e5e5e5;
+  }
+  
+  .form-input-file {
+    height: 40px;
+    font-size: 16px;
+    min-width: 250px;
+    border: 1px solid #DDE2E8;
+    border-radius: 5px;
+    width: 100%;
+  }
+  

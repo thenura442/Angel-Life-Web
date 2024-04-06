@@ -1,0 +1,35 @@
+<div class="container-xl px-4 mt-4">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link ms-0" [ngClass]="{'active': showDetail}" id="detail" (click)="toggleWindow()">Profile</a>
+        <a class="nav-link ms-0" [ngClass]="{'active': !showDetail}" id="security" (click)="toggleWindow()">Security</a>
+    </nav>
+    <hr class="mt-0 mb-4">
+    <div class="row">
+        <div class="col-xl-4">
+            <!-- Profile picture card-->
+            <div class="card mb-4 mb-xl-0"  style="padding-bottom: 3%;">
+                <div class="card-header">Profile Picture</div>
+                <div class="card-body text-center">
+                    <!-- Profile picture image-->
+                    <div class="profile-div">
+                        <div class="inner-profile-div">
+                            <img *ngIf="user.url == null && user.url == undefined && user.url == ''" id="profile" class="profile-img" src="../../../assets/profile pic.jpg">
+                            <img *ngIf="user.url != null && user.url != undefined && user.url != ''" id="profile" class="profile-img" [src]="user.url">
+                        </div>
+                    </div>                    
+                    <!-- Profile picture upload button--><br>
+                    <label for="file_input_id" class="edit-link">Edit Profile Picture</label>
+                    <input type="file" id="file_input_id" class="edit-link" accept="image/png, image/jpg, image/jpeg" (change)="selectImage($event)">
+                    <!-- <button class="btn btn-theme" type="button">Upload new image</button> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <app-detail *ngIf="component === 'detail'"></app-detail>
+            <app-security *ngIf="component === 'security'"></app-security>
+        </div>        
+    </div>
+    <app-success *ngIf="postSuccess" [success]="postSuccessMessage" (Event)="closeWindow($event)"></app-success>
+    <app-error *ngIf="postError" [error]="postErrorMessage" (Event)="closeWindow($event)"></app-error>
+</div>
